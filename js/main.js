@@ -1,6 +1,4 @@
-// Attendre que le DOM soit chargé
-document.addEventListener('DOMContentLoaded', (event) => {
-    // Initialiser particles.js
+document.addEventListener('DOMContentLoaded', function() {
     particlesJS('particles-js', {
         "particles": {
             "number": {
@@ -11,7 +9,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
                 }
             },
             "color": {
-                "value": "#00a8ff"
+                "value": "#ffffff"
             },
             "shape": {
                 "type": "circle",
@@ -43,7 +41,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
             "line_linked": {
                 "enable": true,
                 "distance": 150,
-                "color": "#00a8ff",
+                "color": "#ffffff",
                 "opacity": 0.4,
                 "width": 1
             },
@@ -55,6 +53,11 @@ document.addEventListener('DOMContentLoaded', (event) => {
                 "straight": false,
                 "out_mode": "out",
                 "bounce": false,
+                "attract": {
+                    "enable": false,
+                    "rotateX": 600,
+                    "rotateY": 1200
+                }
             }
         },
         "interactivity": {
@@ -71,6 +74,19 @@ document.addEventListener('DOMContentLoaded', (event) => {
                 "resize": true
             },
             "modes": {
+                "grab": {
+                    "distance": 400,
+                    "line_linked": {
+                        "opacity": 1
+                    }
+                },
+                "bubble": {
+                    "distance": 400,
+                    "size": 40,
+                    "duration": 2,
+                    "opacity": 8,
+                    "speed": 3
+                },
                 "repulse": {
                     "distance": 200,
                     "duration": 0.4
@@ -78,38 +94,11 @@ document.addEventListener('DOMContentLoaded', (event) => {
                 "push": {
                     "particles_nb": 4
                 },
+                "remove": {
+                    "particles_nb": 2
+                }
             }
         },
         "retina_detect": true
-    });
-
-    // Smooth scrolling pour les liens de navigation
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
-            });
-        });
-    });
-
-    // Animation des sections au scroll
-    const sections = document.querySelectorAll('.section');
-    const options = {
-        root: null,
-        threshold: 0.1,
-        rootMargin: "0px"
-    };
-
-    const observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('fade-in');
-            }
-        });
-    }, options);
-
-    sections.forEach(section => {
-        observer.observe(section);
     });
 });

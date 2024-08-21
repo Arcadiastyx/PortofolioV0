@@ -1,146 +1,92 @@
-* {
+body, html {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-
-body, html {
     font-family: Arial, sans-serif;
-    line-height: 1.6;
-    color: #333;
-    scroll-behavior: smooth;
-}
-
-/* Navigation */
-nav {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    z-index: 1000;
-}
-
-nav ul {
-    display: flex;
-    justify-content: center;
-    list-style-type: none;
-}
-
-nav ul li a {
-    display: block;
     color: white;
-    text-decoration: none;
-    padding: 1rem;
-    transition: background-color 0.3s;
-}
-
-nav ul li a:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-}
-
-/* Sections */
-.section {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    overflow: hidden;
-}
-
-.parallax {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
     height: 100%;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    z-index: -1;
 }
 
-.content {
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 2rem;
-    border-radius: 10px;
-    text-align: center;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-/* Boutons */
-.btn {
-    display: inline-block;
-    background-color: #00a8ff;
-    color: white;
-    padding: 0.8rem 1.5rem;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-    margin-top: 1rem;
-}
-
-.btn:hover {
-    background-color: #0097e6;
-}
-
-/* Styles spécifiques aux sections */
-#home .parallax {
-    background-image: url('data:image/svg+xml;base64,PHN2ZyB2aWV3Ym94PSIwIDAgMTAwIDEwMCIgcHJlc2VydmVhc3BlY3RyYXRpbz0ibm9uZSI+CiAgICAgICAgICAgICAgICA8cG9seWdvbiBmaWxsPSIjMDBhOGZmIiBwb2ludHM9IjAsMTAwIDEwMCwwIDEwMCwxMDAiPjwvcG9seWdvbj4KICAgICAgICAgICAgPC9zdmc+');
-}
-
-#about .parallax {
-    background-image: url('data:image/svg+xml;base64,PHN2ZyB2aWV3Ym94PSIwIDAgMTAwIDEwMCIgcHJlc2VydmVhc3BlY3RyYXRpbz0ibm9uZSI+CiAgICAgICAgICAgICAgICA8cG9seWdvbiBmaWxsPSIjMDA5N2U2IiBwb2ludHM9IjAsMCAxMDAsMCAxMDAsMTAwIj48L3BvbHlnb24+CiAgICAgICAgICAgIDwvc3ZnPg==');
-}
-
-#projects .parallax {
-    background-image: url('data:image/svg+xml;base64,PHN2ZyB2aWV3Ym94PSIwIDAgMTAwIDEwMCIgcHJlc2VydmVhc3BlY3RyYXRpbz0ibm9uZSI+CiAgICAgICAgICAgICAgICA8cG9seWdvbiBmaWxsPSIjMDBhOGZmIiBwb2ludHM9IjAsMCAwLDEwMCAxMDAsMTAwIj48L3BvbHlnb24+CiAgICAgICAgICAgIDwvc3ZnPg==');
-}
-
-#contact .parallax {
-    background-image: url('data:image/svg+xml;base64,PHN2ZyB2aWV3Ym94PSIwIDAgMTAwIDEwMCIgcHJlc2VydmVhc3BlY3RyYXRpbz0ibm9uZSI+CiAgICAgICAgICAgICAgICA8cG9seWdvbiBmaWxsPSIjMDA5N2U2IiBwb2ludHM9IjAsMCAxMDAsMTAwIDAsMTAwIj48L3BvbHlnb24+CiAgICAgICAgICAgIDwvc3ZnPg==');
-}
-
-h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-}
-
-h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-}
-
-p {
-    margin-bottom: 1rem;
-}
-
-/* Responsive design */
-@media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-    }
-
-    .content {
-        padding: 1rem;
-        margin: 1rem;
-    }
-
-    h1 {
-        font-size: 2.5rem;
-    }
-
-    h2 {
-        font-size: 2rem;
-    }
-}
-
-/* Particles.js container */
 #particles-js {
     position: fixed;
     width: 100%;
     height: 100%;
-    background-color: #f0f0f0;
+    background-color: #000;
+    background-image: linear-gradient(to bottom right, #000, #000 50%, #00a8ff 50%, #00a8ff);
+    background-size: 100% 200%;
     z-index: -1;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 20px 0;
+    text-align: right;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0 20px;
+}
+
+nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.content {
+    max-width: 800px;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 4em;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #00a8ff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #0077b3;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 10px;
 }
