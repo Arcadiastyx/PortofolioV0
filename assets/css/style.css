@@ -82,3 +82,13 @@ li {
 .nav a.active {
     font-weight: bold;
 }
+
+.profile-photo {
+    display: block;
+    margin: 0 auto 20px auto; /* Centre l'image horizontalement et ajoute un espace en dessous */
+    border-radius: 50%; /* Rend l'image ronde, si elle est carrée */
+    width: 150px; /* Taille de l'image, ajustable selon vos préférences */
+    height: 150px; /* Assurez-vous que l'image soit carrée */
+    object-fit: cover; /* S'assure que l'image s'ajuste bien dans l'espace défini */
+    border: 3px solid #ffffff; /* Ajoute une bordure blanche autour de l'image */
+}
