@@ -45,3 +45,39 @@ window.addEventListener('scroll', () => {
         }
     });
 });
+
+const selectorButtons = document.querySelectorAll('.selector-btn');
+const projects = document.querySelectorAll('.project');
+
+selectorButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        const category = button.getAttribute('data-category');
+        
+        // Mettre à jour le bouton actif
+        selectorButtons.forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+
+        // Filtrer les projets
+        projects.forEach(project => {
+            if (category === 'all' || project.getAttribute('data-category') === category) {
+                project.style.display = 'block';
+            } else {
+                project.style.display = 'none';
+            }
+        });
+
+        // Animer les projets
+        setTimeout(() => {
+            projects.forEach(project => {
+                if (project.style.display !== 'none') {
+                    project.style.opacity = '0';
+                    project.style.transform = 'translateY(20px)';
+                    setTimeout(() => {
+                        project.style.opacity = '1';
+                        project.style.transform = 'translateY(0)';
+                    }, 50);
+                }
+            });
+        }, 100);
+    });
+});
