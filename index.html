@@ -41,15 +41,6 @@
             .then(data => {
                 document.getElementById('home').innerHTML = data;
             });
-
-        // Load About section
-        fetch('sections/about.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('about').innerHTML = data;
-            });
-
-        // Load Projects section
         fetch('sections/projects.html')
             .then(response => response.text())
             .then(data => {
