@@ -1,0 +1,31 @@
+/* Styles appliqués lorsque la largeur de la fenêtre est au maximum de 768px */
+@media (max-width: 768px) {
+    
+    /* Modifie la disposition des éléments dans la classe 'expandable-container' en mode colonne */
+    .expandable-container {
+        flex-direction: column;
+    }
+    
+    /* Adapte chaque 'expandable-box' pour occuper toute la largeur disponible et ajoute un espacement en dessous */
+    .expandable-box {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    /* Change la disposition des éléments de la classe 'projects-container' pour une seule colonne */
+    .projects-container {
+        grid-template-columns: 1fr;
+    }
+
+    /* Positionne la navigation en haut à droite de la fenêtre */
+    .nav {
+        top: 10px;
+        right: 10px;
+    }
+
+    /* Ajuste la taille de la police des liens de navigation et ajoute un espacement à gauche */
+    .nav a {
+        font-size: 1rem;  /* Réduit la taille de la police des liens */
+        margin-left: 10px;  /* Ajoute un espace entre chaque lien */
+    }
+}

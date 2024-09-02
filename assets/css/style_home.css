@@ -1,0 +1,186 @@
+.profile-photo {
+    display: block;
+    margin: 0 auto 20px auto;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border: 3px solid #ffffff;
+}
+
+.corner-triangle {
+    position: absolute;
+    top: 0;
+    left: 0%;
+    width: 200px;
+    height: 50px;
+    overflow: hidden;
+    z-index: 10;
+}
+
+.corner-triangle svg {
+    width: 100%;
+    height: 100%;
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+    padding-top: 50px;
+}
+
+.text-container {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 2rem;
+    margin-top: 2rem;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.expandable-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+
+.expandable-box {
+    width: 48%;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    padding: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.expandable-box h3 {
+    margin-bottom: 0.5rem;
+    color: #00a8ff;
+}
+
+.expandable-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.expandable-box:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.expandable-box:hover .expandable-content {
+    max-height: 500px;
+}
+
+
+
+
+/* Icône About Me */
+.section {
+    /* La section occupe toute la hauteur de la fenêtre */
+    min-height: 100vh;
+    
+    /* Utilisation de flexbox pour centrer le contenu horizontalement et verticalement */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    /* Position relative pour permettre le positionnement absolu des éléments enfants */
+    position: relative;
+    
+    /* Cache les débordements du contenu qui sortent de la section */
+    overflow: hidden;
+    
+    /* Ajoute un espace de 2rem autour du contenu de la section */
+    padding: 2rem;
+}
+
+.content {
+    /* Définit une largeur maximale pour le contenu */
+    max-width: 1000px;
+    
+    /* Centre le texte à l'intérieur de la section */
+    text-align: center;
+    
+    /* Positionne ce contenu au-dessus d'autres éléments potentiels grâce au z-index */
+    z-index: 2;
+}
+
+h2 {
+    /* Définit la taille de la police pour l'en-tête h2 */
+    font-size: 3rem;
+    
+    /* Ajoute un espacement en dessous de l'en-tête */
+    margin-bottom: 1rem;
+    
+    /* Change la couleur du texte de l'en-tête */
+    color: #00a8ff;
+}
+
+.about-icon {
+    /* Définit la largeur et la hauteur de l'icône */
+    width: 200px;
+    height: 200px;
+    
+    /* Ajoute un espacement en dessous de l'icône */
+    margin-bottom: 2rem;
+    
+    /* Applique une animation de flottement à l'icône */
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    /* Animation pour faire flotter l'icône vers le haut et le bas */
+    0% {
+        transform: translateY(0px); /* Position de départ */
+    }
+    50% {
+        transform: translateY(-20px); /* Monte de 20 pixels à mi-chemin */
+    }
+    100% {
+        transform: translateY(0px); /* Revient à la position de départ */
+    }
+}
+
+.skills-container {
+    /* Utilisation de flexbox pour organiser les compétences */
+    display: flex;
+    
+    /* Permet aux compétences de passer à une nouvelle ligne si nécessaire */
+    flex-wrap: wrap;
+    
+    /* Centre les compétences horizontalement */
+    justify-content: center;
+    
+    /* Ajoute un espace entre chaque compétence */
+    gap: 20px;
+    
+    /* Ajoute une marge au-dessus des compétences */
+    margin-top: 2rem;
+}
+
+.skill {
+    /* Définition du fond semi-transparent pour chaque compétence */
+    background-color: rgba(255, 255, 255, 0.1);
+    
+    /* Ajoute du padding pour créer un espacement intérieur */
+    padding: 10px 20px;
+    
+    /* Arrondit les coins de chaque compétence */
+    border-radius: 20px;
+    
+    /* Définition de la taille de la police pour les compétences */
+    font-size: 1rem;
+    
+    /* Ajoute une transition pour l'effet d'animation lors du survol */
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.skill:hover {
+    /* Augmente légèrement la taille de l'élément lors du survol */
+    transform: scale(1.05);
+    
+    /* Change la couleur de fond à une couleur plus opaque lors du survol */
+    background-color: rgba(255, 255, 255, 0.2);
+}

@@ -1,44 +1,48 @@
 <section id="projects" class="section">
     <div class="parallax">
-        <!-- Ajout du SVG de fond pour la section Projects -->
-        <svg viewBox="0 0 100 100" preserveAspectRatio="none">
-            <polygon fill="#0097e6" points="0,0 100,0 100,100"/>
-        </svg>
     </div>
     <div class="content">
         <h2>My Projects</h2>
-        <div class="project-selector">
-            <button class="selector-btn active" data-category="all">All</button>
-            <button class="selector-btn" data-category="web">Web</button>
-            <button class="selector-btn" data-category="mobile">Mobile</button>
-            <button class="selector-btn" data-category="design">Design</button>
-        </div>
-        <div class="projects-container">
-            <div class="project" data-category="web">
-                <img src="assets/images/project1.jpg" alt="Web project thumbnail showing a responsive website design" width="300" height="200">
-                <div class="project-info">
-                    <h3 class="project-title">Responsive Portfolio</h3>
-                    <p class="project-description">A fully responsive personal portfolio website built with HTML, CSS, and JavaScript.</p>
+
+        <div class="container">
+            <div class="category_container">
+                <div class="content" style="background-image: url('assets/images/project1.jpg');">
+                    <img class="profile_image" src="assets/images/project4.png" alt="Web project thumbnail">
+                    <div class="profile_detail">
+                        <span>Project1</span>
+                        <p>Web Development</p>
+                    </div>
+                    <div class="wrapper">
+                        <div class="profile_quote">
+                            <p>A fully responsive personal portfolio website built with HTML, CSS, and JavaScript.</p>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="project" data-category="mobile">
-                <img src="assets/images/project2.jpg" alt="Mobile app interface mockup for a fitness tracking app" width="300" height="200">
-                <div class="project-info">
-                    <h3 class="project-title">Fitness Tracker App</h3>
-                    <p class="project-description">A mobile app for tracking workouts and nutrition, developed using React Native.</p>
+                <div class="content" style="background-image: url('assets/images/project2.jpg');">
+                    <img class="profile_image" src="assets/images/project2.png" alt="Mobile app interface mockup">
+                    <div class="profile_detail">
+                        <span>Project2</span>
+                        <p>Mobile Development</p>
+                    </div>
+                    <div class="wrapper">
+                        <div class="profile_quote">
+                            <p>A mobile app for tracking workouts and nutrition, developed using React Native.</p>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="project" data-category="design">
-                <img src="assets/images/project3.jpg" alt="UI design for an e-commerce platform showing product listings" width="300" height="200">
-                <div class="project-info">
-                    <h3 class="project-title">E-commerce UI Design</h3>
-                    <p class="project-description">A sleek and modern UI design for an e-commerce platform, created in Figma.</p>
+                <div class="content" style="background-image: url('assets/images/project3.jpg');">
+                    <img class="profile_image" src="assets/images/project3.png" alt="UI design for e-commerce">
+                    <div class="profile_detail">
+                        <span>project3</span>
+                        <p>UI/UX Design</p>
+                    </div>
+                    <div class="wrapper">
+                        <div class="profile_quote">
+                            <p>A sleek and modern UI design for an e-commerce platform, created in Figma.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
-
-
-
-
